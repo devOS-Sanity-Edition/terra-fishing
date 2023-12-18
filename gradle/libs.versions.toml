@@ -1,0 +1,30 @@
+[versions]
+# The latest versions are available at https://fabricmc.net/develop
+minecraft = "1.20.4"
+fabric-loader = "0.15.3"
+
+fabric-api = "0.91.3+1.20.4"
+
+sodium_version = "mc1.20.3-0.5.5"
+mod_menu_version = "9.0.0"
+joml_version = "1.10.5"
+
+[libraries]
+minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
+fabric_loader = { module = "net.fabricmc:fabric-loader", version.ref = "fabric-loader" }
+
+fabric-api = { module = "net.fabricmc.fabric-api:fabric-api", version.ref = "fabric-api" }
+
+sodium = { module = "maven.modrinth:sodium", version.ref = "sodium_version" }
+joml = { module = "org.joml:joml", version.ref = "joml_version" }
+mod_menu = { module = "com.terraformersmc:modmenu", version.ref = "mod_menu_version" }
+
+# If you have multiple similar dependencies, you can declare a dependency bundle and reference it on the build script with "libs.bundles.example".
+[bundles]
+dev_mods = [ "joml", "sodium" ]
+dependencies = [ "mod_menu" ]
+
+[plugins]
+grgit = { id = "org.ajoberstar.grgit", version = "5.2.1"}
+fabric_loom = { id = "fabric-loom", version = "1.4-SNAPSHOT" }
+
