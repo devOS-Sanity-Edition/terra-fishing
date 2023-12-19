@@ -8,6 +8,8 @@ fabric-api = "0.91.3+1.20.4"
 sodium_version = "mc1.20.3-0.5.5"
 mod_menu_version = "9.0.0"
 joml_version = "1.10.5"
+trinkets_version = "3.8.0"
+cca_version = "5.4.0"
 
 [libraries]
 minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
@@ -18,11 +20,15 @@ fabric-api = { module = "net.fabricmc.fabric-api:fabric-api", version.ref = "fab
 sodium = { module = "maven.modrinth:sodium", version.ref = "sodium_version" }
 joml = { module = "org.joml:joml", version.ref = "joml_version" }
 mod_menu = { module = "com.terraformersmc:modmenu", version.ref = "mod_menu_version" }
+trinkets = { module = "dev.emi:trinkets", version.ref = "trinkets_version" }
+
+cca-base = { module = "dev.onyxstudios.cardinal-components-api:cardinal-components-base", version.ref = "cca_version" }
+cca-entity = { module = "dev.onyxstudios.cardinal-components-api:cardinal-components-entity", version.ref = "cca_version" }
 
 # If you have multiple similar dependencies, you can declare a dependency bundle and reference it on the build script with "libs.bundles.example".
 [bundles]
-dev_mods = [ "joml", "sodium" ]
-dependencies = [ "mod_menu" ]
+dev_mods = [ "joml", "sodium", "cca-base", "cca-entity" ]
+dependencies = [ "mod_menu", "trinkets" ]
 
 [plugins]
 grgit = { id = "org.ajoberstar.grgit", version = "5.2.1"}

@@ -15,6 +15,7 @@ repositories {
 	maven { url = uri("https://api.modrinth.com/maven") }
 	maven { url = uri("https://maven.terraformersmc.com/") }
 	maven { url = uri("https://maven.parchmentmc.org") }
+	maven { url = uri("https://maven.ladysnake.org/releases") }
 }
 
 //All dependencies and their versions are in ./gradle/libs.versions.toml

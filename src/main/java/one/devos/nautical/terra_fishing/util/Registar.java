@@ -7,11 +7,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
-import net.minecraft.world.level.block.Block;
-import one.devos.nautical.terra_fishing.items.FishFinderItem;
-import one.devos.nautical.terra_fishing.items.PocketGuideItem;
-import one.devos.nautical.terra_fishing.items.RadioItem;
-import one.devos.nautical.terra_fishing.items.SextantItem;
+import one.devos.nautical.terra_fishing.items.*;
 
 import static one.devos.nautical.terra_fishing.TerraFishing.ITEM_GROUP;
 import static one.devos.nautical.terra_fishing.TerraFishing.MODID;
@@ -22,11 +18,11 @@ public class Registar {
     public static final Item RADIO = registerItem("radio", new RadioItem(new FabricItemSettings().stacksTo(1)));
     public static final Item POCKET_GUIDE = registerItem("pocket_guide", new PocketGuideItem(new FabricItemSettings().stacksTo(1)));
     public static final Item FISH_FINDER = registerItem("fish_finder", new FishFinderItem(new FabricItemSettings().stacksTo(1).rarity(Rarity.UNCOMMON)));
-//    public static final Item EARRING;
-//    public static final Item TACKLE_BOX;
-//    public static final Item LAVA_HOOK;
-//    public static final Item BOBBER;
-//    public static final Item GLOW_BOBBER;
+    public static final Item EARRING = registerItem("earring", new EarringTrinketItem(new FabricItemSettings().stacksTo(1)));
+    public static final Item TACKLE_BOX = registerItem("tackle_box", new TackleBoxTrinketItem(new FabricItemSettings().stacksTo(1))); // legs/belt
+//    public static final Item LAVA_HOOK; // fishing/hook
+    public static final Item BOBBER = registerItem("bobber", new FishingBobberTrinketItem(new FabricItemSettings().stacksTo(1)));
+    public static final Item GLOW_BOBBER = registerItem("glow_bobber", new GlowingFishingBobberTrinketItem(new FabricItemSettings().stacksTo(1).rarity(Rarity.UNCOMMON)));
 //
 //    public static final Item ANGLER_HAT;
 //    public static final Item ANGLER_VEST;
