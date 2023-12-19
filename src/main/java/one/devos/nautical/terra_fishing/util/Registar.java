@@ -42,11 +42,10 @@ public class Registar {
 //    public static final Item JOURNEYMAN;
 //    public static final Item MASTER;
 //
-//    public static final Item INFINITE_WATER_BUCKET;
-//
+//    public static final Item BOTTOMLESS_BUCKET;
+//    public static final Block EMPTY_BOTTOMLESS_BUCKET;
+    
 //    // Blocks
-//    public static final Block INFINITE_SPONGE;
-//
 //    public static final Block WOODEN_CRATE;
 //    public static final Block IRON_CRATE;
 //    public static final Block GOLDEN_CRATE;
