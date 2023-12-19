@@ -1,34 +1,35 @@
 {
 	"schemaVersion": 1,
-	"id": "template",
+	"id": "terra_fishing",
 	"version": "${version}",
-	"name": "Template mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Terra Fishing",
+	"description": "terraria in minecraft no way",
 	"authors": [
 		"devOS: Sanity Edition",
-		"Team Nautical"
+		"Team Nautical",
+		"Stereo528"
 	],
 	"contact": {
 		"homepage": "https://devos.one/",
-		"sources": "https://github.com/devOS-Sanity-Edition/fabric-nautical-template"
+		"sources": "https://github.com/devOS-Sanity-Edition/terra-fishing"
 	},
 	"license": "MIT",
-	"icon": "assets/template/icon.png",
+	"icon": "assets/terra_fishing/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"one.devos.nautical.template.TemplateMod"
+			"one.devos.nautical.terra_fishing.TerraFishing"
 		],
 		"client": [
-			"one.devos.nautical.template.client.TemplateModClient"
+			"one.devos.nautical.terra_fishing.client.TerraFishingClient"
 		]
 	},
 	"mixins": [
-		"template.mixins.json"
+		"terra_fishing.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.14.21",
-		"minecraft": "~1.20.1",
+		"fabricloader": ">=0.15.3",
+		"minecraft": "~1.20.4",
 		"java": ">=17",
 		"fabric-api": "*"
 	}
