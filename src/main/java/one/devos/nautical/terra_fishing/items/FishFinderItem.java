@@ -8,15 +8,17 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
-public class RadioItem extends Item {
-    public RadioItem(Properties properties) {
+import static net.minecraft.world.entity.ai.attributes.Attributes.LUCK;
+
+public class FishFinderItem extends Item {
+    public FishFinderItem(Properties properties) {
         super(properties);
     }
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand usedHand) {
         ItemStack itemStack = player.getItemInHand(usedHand);
-        player.displayClientMessage(Component.literal(getWeather(level) + " | " + getMoonPhase(level)), true);
+        player.displayClientMessage(Component.literal("Fishing Luck: " + player.getAttributeValue(LUCK) + " | " + getWeather(level) + " | " + getMoonPhase(level) + " | " + getPlayerCoords(player)), true);
         return InteractionResultHolder.success(itemStack);
     }
 
@@ -50,4 +52,11 @@ public class RadioItem extends Item {
                 return "Unknown Moon Phase";
         }
     }
+
+    private String getPlayerCoords(Player player) {
+        int playerX = (int) player.getX();
+        int playerZ = (int) player.getZ();
+        return "X: " + playerX + ", Z: " + playerZ;
+    }
+
 }

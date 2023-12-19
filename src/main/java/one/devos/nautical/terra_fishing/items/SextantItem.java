@@ -23,8 +23,8 @@ public class SextantItem extends Item {
     private String getPlayerCoords(Player player) {
         int playerX = roundToNearest50((int) player.getX());
         int playerZ = roundToNearest50((int) player.getZ());
-        String roundedXY = "X: " + playerX + ", Z: " + playerZ;
-        return "By the stars, you are close to " + roundedXY;
+        String roundedXZ = "X: " + playerX + ", Z: " + playerZ;
+        return "By the stars, you are close to " + roundedXZ;
     }
 
     private int roundToNearest50(int num) {

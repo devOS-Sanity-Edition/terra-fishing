@@ -8,6 +8,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.block.Block;
+import one.devos.nautical.terra_fishing.items.FishFinderItem;
+import one.devos.nautical.terra_fishing.items.PocketGuideItem;
 import one.devos.nautical.terra_fishing.items.RadioItem;
 import one.devos.nautical.terra_fishing.items.SextantItem;
 
@@ -16,10 +18,10 @@ import static one.devos.nautical.terra_fishing.TerraFishing.MODID;
 
 public class Registar {
     // Items
-    public static final Item SEXTANT = registerItem("sextant", new SextantItem(new FabricItemSettings().stacksTo(1).rarity(Rarity.UNCOMMON)));
-    public static final Item RADIO = registerItem("radio", new RadioItem(new FabricItemSettings().stacksTo(1).rarity(Rarity.UNCOMMON)));
-//    public static final Item POCKET_GUIDE;
-//    public static final Item FISH_FINDER;
+    public static final Item SEXTANT = registerItem("sextant", new SextantItem(new FabricItemSettings().stacksTo(1)));
+    public static final Item RADIO = registerItem("radio", new RadioItem(new FabricItemSettings().stacksTo(1)));
+    public static final Item POCKET_GUIDE = registerItem("pocket_guide", new PocketGuideItem(new FabricItemSettings().stacksTo(1)));
+    public static final Item FISH_FINDER = registerItem("fish_finder", new FishFinderItem(new FabricItemSettings().stacksTo(1).rarity(Rarity.UNCOMMON)));
 //    public static final Item EARRING;
 //    public static final Item TACKLE_BOX;
 //    public static final Item LAVA_HOOK;
