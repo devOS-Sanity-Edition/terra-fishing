@@ -100,6 +100,10 @@ publishing {
 //	}
 }
 
+loom {
+	accessWidenerPath = file("src/main/resources/terra_fishing.accesswidener")
+}
+
 fun getModVersion(): String {
 	val modVersion = project.property("mod_version")
 	val buildId = System.getenv("GITHUB_RUN_NUMBER")

@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import one.devos.nautical.terra_fishing.items.*;
@@ -23,12 +24,12 @@ public class Registar {
 //    public static final Item LAVA_HOOK; // fishing/hook
     public static final Item BOBBER = registerItem("bobber", new FishingBobberTrinketItem(new FabricItemSettings().stacksTo(1)));
     public static final Item GLOW_BOBBER = registerItem("glow_bobber", new GlowingFishingBobberTrinketItem(new FabricItemSettings().stacksTo(1).rarity(Rarity.UNCOMMON)));
-//
-//    public static final Item ANGLER_HAT;
-//    public static final Item ANGLER_VEST;
-//    public static final Item ANGLER_PANTS;
-//    public static final Item ANGLER_WADERS;
-//
+
+    public static final Item ANGLER_HAT = registerItem("angler_hat", new AnglerArmorItem(AnglerArmorMaterial.ANGLER, ArmorItem.Type.HELMET, new FabricItemSettings().maxCount(1)));
+    public static final Item ANGLER_VEST = registerItem("angler_vest", new AnglerArmorItem(AnglerArmorMaterial.ANGLER, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().maxCount(1)));
+    public static final Item ANGLER_PANTS = registerItem("angler_pants", new AnglerArmorItem(AnglerArmorMaterial.ANGLER, ArmorItem.Type.LEGGINGS, new FabricItemSettings().maxCount(1)));
+    public static final Item ANGLER_WADERS = registerItem("angler_waders", new AnglerArmorItem(AnglerArmorMaterial.ANGLER, ArmorItem.Type.BOOTS, new FabricItemSettings().maxCount(1)));
+
 //    public static final Item IRON_FISHING_ROD;
 //    public static final Item GOLDEN_FISHING_ROD;
 //    public static final Item NETHERITE_FISHING_ROD;
