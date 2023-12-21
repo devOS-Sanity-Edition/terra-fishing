@@ -11,12 +11,11 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import one.devos.nautical.terra_fishing.util.Registar;
-import org.intellij.lang.annotations.Identifier;
+import one.devos.nautical.terra_fishing.util.Registrar;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static one.devos.nautical.terra_fishing.util.Registar.SEXTANT;
+import static one.devos.nautical.terra_fishing.util.Registrar.SEXTANT;
 
 public class TerraFishing implements ModInitializer {
 	public static String MODID = "terra_fishing";
@@ -31,7 +30,7 @@ public class TerraFishing implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, ITEM_GROUP, TERRA_FISHING_GROUP);
-		Registar.init();
+		Registrar.init();
 		LOGGER.info("bobbing your bobbers");
 	}
 }

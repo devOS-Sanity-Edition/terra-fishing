@@ -13,15 +13,15 @@ import one.devos.nautical.terra_fishing.items.*;
 import static one.devos.nautical.terra_fishing.TerraFishing.ITEM_GROUP;
 import static one.devos.nautical.terra_fishing.TerraFishing.MODID;
 
-public class Registar {
+public class Registrar {
     // Items
     public static final Item SEXTANT = registerItem("sextant", new SextantItem(new FabricItemSettings().stacksTo(1)));
     public static final Item RADIO = registerItem("radio", new RadioItem(new FabricItemSettings().stacksTo(1)));
     public static final Item POCKET_GUIDE = registerItem("pocket_guide", new PocketGuideItem(new FabricItemSettings().stacksTo(1)));
     public static final Item FISH_FINDER = registerItem("fish_finder", new FishFinderItem(new FabricItemSettings().stacksTo(1).rarity(Rarity.UNCOMMON)));
     public static final Item EARRING = registerItem("earring", new EarringTrinketItem(new FabricItemSettings().stacksTo(1)));
-    public static final Item TACKLE_BOX = registerItem("tackle_box", new TackleBoxTrinketItem(new FabricItemSettings().stacksTo(1))); // legs/belt
-//    public static final Item LAVA_HOOK; // fishing/hook
+    public static final Item TACKLE_BOX = registerItem("tackle_box", new TackleBoxTrinketItem(new FabricItemSettings().stacksTo(1)));
+    public static final Item HOOK = registerItem("hook", new FishingHookTrinketItem(new FabricItemSettings().maxCount(1).fireproof()));
     public static final Item BOBBER = registerItem("bobber", new FishingBobberTrinketItem(new FabricItemSettings().stacksTo(1)));
     public static final Item GLOW_BOBBER = registerItem("glow_bobber", new GlowingFishingBobberTrinketItem(new FabricItemSettings().stacksTo(1).rarity(Rarity.UNCOMMON)));
 
